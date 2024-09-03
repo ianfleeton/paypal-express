@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  ruby-versions:
+    uses: ruby/actions/.github/workflows/ruby_versions.yml@master
+    with:
+      min_version: 3.1
+      engine: cruby
+
+  test:
+    needs: ruby-versions
+    runs-on: ubuntu-latest
+    env:
+      RAILS_VERSION: ${{ matrix.rails-version }}
+
+    strategy:
+      matrix:
+        ruby-version: ${{ fromJson(needs.ruby-versions.outputs.versions) }}
+        rails-version:
+          - "~> 7.0"
+          - "~> 7.1"
+          - "~> 7.2"
+          
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Ruby ${{ matrix.ruby-version }}
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - name: Run tests
+        run: bundle exec rake
