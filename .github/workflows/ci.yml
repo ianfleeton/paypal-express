@@ -13,6 +13,7 @@ jobs:
 
   test:
     needs: ruby-versions
+    name: Ruby ${{ matrix.ruby-version}}, Rails ${{ matrix.rails-version }}
     runs-on: ubuntu-latest
     env:
       RAILS_VERSION: ${{ matrix.rails-version }}
