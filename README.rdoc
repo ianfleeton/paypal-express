@@ -4,8 +4,6 @@ Handle PayPal Express Checkout.
 Both Instance Payment and Recurring Payment are supported.
 Express Checkout for Digital Goods is also supported.
 
-{<img src="https://travis-ci.org/ianfleeton/paypal-express.svg" />}[https://travis-ci.org/ianfleeton/paypal-express]
-
 == Deprecation warning
 
 Many, or perhaps all, of the APIs used in this gem have been {deprecated}[https://developer.paypal.com/docs/archive/express-checkout/] since January 2017.
