@@ -20,7 +20,7 @@ module Paypal
           params.merge! attribute.to_params
         end
         if self.start_date.is_a?(Time)
-          self.start_date = self.start_date.to_s(:db)
+          self.start_date = self.start_date.to_fs(:db)
         end
         params.merge!(
           :DESC  => self.description,

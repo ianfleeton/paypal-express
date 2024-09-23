@@ -4,8 +4,6 @@ Handle PayPal Express Checkout.
 Both Instance Payment and Recurring Payment are supported.
 Express Checkout for Digital Goods is also supported.
 
-{<img src="https://travis-ci.org/ianfleeton/paypal-express.svg" />}[https://travis-ci.org/ianfleeton/paypal-express]
-
 == Deprecation warning
 
 Many, or perhaps all, of the APIs used in this gem have been {deprecated}[https://developer.paypal.com/docs/archive/express-checkout/] since January 2017.
@@ -32,6 +30,14 @@ https://github.com/ianfleeton/paypal-express/wiki
 Play with Sample Rails App
 https://github.com/ianfleeton/paypal-express-sample
 https://paypal-express-sample.heroku.com
+
+== Compatibility
+
+We run tests on these versions of activesupport:
+
+- 7.0
+- 7.1
+- 7.2
 
 == Note on Patches/Pull Requests
 
