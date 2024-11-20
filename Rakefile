@@ -13,7 +13,7 @@ namespace :coverage do
 end
 
 task :spec do
-  Rake::Task[:'coverage:report'].invoke unless ENV['TRAVIS_RUBY_VERSION']
+  Rake::Task[:'coverage:report'].invoke unless ENV['CI']
 end
 
 task :default => :spec
