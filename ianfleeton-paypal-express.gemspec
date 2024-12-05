@@ -2,6 +2,7 @@ Gem::Specification.new do |s|
   s.name = "ianfleeton-paypal-express"
   s.version = File.read(File.join(File.dirname(__FILE__), "VERSION"))
   s.licenses = ['MIT']
+  s.required_ruby_version = '>= 3.1.0'
   s.required_rubygems_version = Gem::Requirement.new(">= 1.3.6") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ian Fleeton", "nov matake"]
   s.description = %q{PayPal Express Checkout API Client for Instance, Recurring and Digital Goods Payment.}
