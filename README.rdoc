@@ -33,11 +33,12 @@ https://paypal-express-sample.heroku.com
 
 == Compatibility
 
-We run tests on these versions of activesupport:
+We run tests on these versions of Active Support:
 
 - 7.0
 - 7.1
 - 7.2
+- 8.0
 
 == Note on Patches/Pull Requests
 
