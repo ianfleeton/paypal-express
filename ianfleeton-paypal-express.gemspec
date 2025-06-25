@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email = 'ianfleeton@gmail.com'
   s.extra_rdoc_files = ["LICENSE", "README.rdoc"]
   s.rdoc_options = ["--charset=UTF-8"]
-  s.homepage = "http://github.com/ianfleeton/paypal-express"
+  s.homepage = "https://github.com/ianfleeton/paypal-express"
   s.require_paths = ["lib"]
   s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.files = `git ls-files`.split("\n")
